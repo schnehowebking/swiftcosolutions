@@ -1,0 +1,1 @@
+[13-Jun-2023 14:26:59 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 8.0.28. in /home/swifrmnh/hrm.swiftcosolutions.com/vendor/composer/platform_check.php on line 24

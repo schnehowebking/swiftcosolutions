@@ -1,0 +1,376 @@
+/**======================================================================
+=========================================================================
+Template Name: Dashboard Bootstrap 5 Admin Template
+Author: Rajodiya Infotech
+Support: [support link]
+File: style.css
+=========================================================================
+=================================================================================== */
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background: white;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+a:focus, a:hover {
+    outline: none;
+    text-decoration: none;
+}
+
+section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.bg-dark {
+    background: #1c232f !important;
+    color: #fff;
+}
+
+.bg-dark p {
+    color: #b5bdca;
+}
+
+.bg-dark .title h2 {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.bg-dark .title h2 span {
+    color: #fff;
+}
+
+.theme-alt-bg {
+    background: #ededed;
+}
+
+.title {
+    position: relative;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.title h2 {
+    margin-bottom: 15px;
+    z-index: 3;
+    color: #293240;
+    margin-top: 15px;
+    text-transform: capitalize;
+}
+
+.title h2 span {
+    font-weight: 600;
+    color: #060606;
+}
+
+.title .material-icons-two-tone {
+    font-size: 40px;
+}
+
+@media only screen and (max-width: 992px) {
+    .title {
+        margin-bottom: 30px;
+    }
+
+    .title h2 {
+        margin-bottom: 10px;
+    }
+}
+
+.navbar {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 70px;
+    top: -80px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s linear;
+    margin-bottom: 0;
+    box-shadow: 0 8px 6px -10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar.default {
+    top: 0;
+    background: rgba(28, 35, 47, 0.9);
+}
+
+/* .navbar.default.top-nav-collapse {
+    background: transparent;
+    box-shadow: none;
+} */
+
+@media (min-width: 767px) {
+    .navbar .navbar-nav .nav-link {
+        position: relative;
+    }
+
+    .navbar .navbar-nav .nav-link.active:after {
+        left: 15%;
+        right: 15%;
+    }
+}
+
+header:not(.price-header) {
+    position: relative;
+    color: #fff;
+    min-height: 60vh;
+    padding-top: 160px;
+    padding-bottom: 90px;
+    display: flex;
+    align-items: center;
+}
+
+header:not(.price-header) > * {
+    position: relative;
+    z-index: 5;
+}
+
+header:not(.price-header):after, header:not(.price-header):before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+header:not(.price-header):before {
+    background-attachment: fixed;
+    z-index: 1;
+}
+
+header.price-header {
+    position: relative;
+    min-height: 60vh;
+    padding-top: 160px;
+    padding-bottom: 90px;
+    display: flex;
+    align-items: center;
+}
+header:not(.price-header) {
+    /* margin-top: 69px; */
+   }
+
+.dashboard-block {
+    position: relative;
+    overflow: hidden;
+}
+
+.dashboard-block .img-dashboard {
+    margin-bottom: -15%;
+}
+
+.feature {
+    text-align: center;
+}
+
+.feature .card-body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.feature .theme-avtar {
+    width: 130px;
+    height: 130px;
+    font-size: 45px;
+    margin: 0 auto;
+    border-radius: 50px;
+}
+
+.price-section {
+    position: relative;
+}
+
+.price-section > * {
+    position: relative;
+    z-index: 5;
+}
+
+.price-section::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 50%;
+    z-index: 1;
+    background: linear-gradient(180deg, #cecece 0%, #ffffff 100%);
+}
+
+.faq .accordion .accordion-item {
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.faq .accordion .accordion-item .accordion-button {
+    font-weight: 700;
+    padding: 1.3rem 1.25rem;
+}
+
+.faq .accordion .accordion-item .accordion-button span > i {
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+.faq .accordion .accordion-item .accordion-button:not(.collapsed) {
+    border-radius: 10px;
+    background: transparent;
+    box-shadow: 0 6px 30px rgba(182, 186, 203, 0.3);
+}
+
+.faq .accordion .accordion-item .accordion-body {
+    padding: 2.3rem 2.3rem 2.3rem 3rem;
+}
+
+.price-card {
+    text-align: center;
+    position: relative;
+    margin-top: 30px;
+}
+
+.price-card.price-2 {
+    color: #fff;
+}
+
+.price-card.price-2 .price-badge {
+    color: #fff;
+    background: #1c232f;
+}
+
+.price-card .p-price {
+    font-size: 80px;
+}
+
+.price-card .price-badge {
+    color: #fff;
+    padding: 7px 24px;
+    border-radius: 30px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.price-card .list-unstyled {
+    display: inline-block;
+}
+
+.price-card .list-unstyled li {
+    display: flex;
+    align-items: center;
+}
+
+.price-card .list-unstyled li + li {
+    margin-top: 8px;
+}
+
+.price-card .list-unstyled .theme-avtar {
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    background: #fff;
+    margin-right: 15px;
+}
+
+.side-feature {
+    overflow: hidden;
+}
+
+.side-feature .feature-img-row {
+    width: 80vw;
+}
+
+@media only screen and (max-width: 992px) {
+    header,
+  section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        height: auto;
+    }
+}
+
+
+/* responsive landing page */
+
+@media only screen and (max-width: 991px) {
+    .img-dashboard.wow.animate__fadeInUp {
+        margin-bottom: 0;
+    }
+    .mobile-widget {
+        padding: 0 0 30px !important;
+    }
+    .mobile-screen {
+        justify-content: space-evenly !important;
+    }
+    .my-4.wow.animate__fadeInLeft {
+        display: flex;
+    }
+    .btn {
+        font-size: 10px;
+    }
+    .animate__fadeInLeft .btn i {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar-nav a.btn.btn-light.ms-2.me-1 {
+        margin-bottom: 10px !important;
+    }
+}
+@media only screen and (max-width: 575px) {
+    header, section {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+    .feature .theme-avtar {
+        width: 90px;
+        height: 90px;
+    }
+    .feature .theme-avtar .ti {
+        font-size: 30px;
+    }
+    .footer .text-end {
+        text-align: start !important;
+        padding-top: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 330px)
+{
+    header, section {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+    .feature-mobile-screen {
+        display: flex;
+        justify-content: space-between;
+    }
+    .img-dashboard.wow.animate__fadeInUp {
+        margin-bottom: 0;
+    }
+    body.theme-3 .progress-bar:not([class*="bg-"]), body.theme-3 .btn-primary {
+        font-size: 11px;
+    }
+    body.theme-3 .btn-outline-primary {
+        font-size: 11px;
+    }
+}
+
+/* end responsive landing page */
+
+
