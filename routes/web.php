@@ -100,7 +100,14 @@ use App\Http\Controllers\Frontend\JobFrontendController;
 //
 Route::get('/', [CompanyFrontendController::class, 'index']);
 Route::get('/learning', [ElearningFrontendController::class, 'index']);
+Route::get('/learning/create', [ElearningFrontendController::class, 'create'])->name('frontend.training.create');
+Route::post('/learning/store', [ElearningFrontendController::class, 'store'])->name('frontend.training.store');
+Route::get('/learning/show/{id}', [ElearningFrontendController::class, 'show'])->name('frontend.training.show');
+
 Route::get('/jobs', [JobFrontendController::class, 'index']);
+Route::get('/jobs/create', [JobFrontendController::class, 'create'])->name('frontend.job.create');
+Route::post('/jobs/store', [JobFrontendController::class, 'store'])->name('frontend.jobs.store');
+Route::get('/jobs/show/{id}', [JobFrontendController::class, 'show'])->name('frontend.job.show');
 // Route::get('/dashboard', function () {
 //     return view('dashboard.dashboard');
 // })->middleware(['auth'])->name('dashboard');
