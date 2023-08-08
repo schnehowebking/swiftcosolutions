@@ -190,7 +190,7 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="count-job mb-35">
-                                        <span>39, 782 Jobs found</span>
+                                        <span>{{ count($jobs) }} Jobs found</span>
                                         <!-- Select job items start -->
                                         <div class="select-job-items">
                                             <span>Sort by</span>
@@ -215,7 +215,7 @@
                                         <a href="#"><img src="assets/img/icon/job-list1.png" alt=""></a>
                                     </div>
                                     <div class="job-tittle job-tittle2">
-                                        <a href="#">
+                                        <a href="{{ route('frontend.job.show', [$job->id]) }}">
                                             <h4>{{$job->title }}</h4>
                                         </a>
                                         <ul>
@@ -226,9 +226,12 @@
                                     </div>
                                 </div>
                                 <div class="items-link items-link2 f-right">
-                                    <a href="{{ route('frontend.job.show', $job->id)}}">{{ $job->job_type == 10 ? 'Part Time' ? $job->job_type == 20 ? "Full time" : "Contactual" }}</a>
-                                    <span>{{$job->created_at}} </span>
+                                    <a href="{{ route('frontend.job.show', [$job->id]) }}">
+                                        {{ $job->job_type == 10 ? 'Part Time' : ($job->job_type == 20 ? 'Full Time' : 'Contractual') }}
+                                    </a>
+                                    <span>{{ $job->created_at }}</span>
                                 </div>
+                                
                             </div>
                             @endforeach
                             @endif
@@ -241,25 +244,8 @@
     </div>
     <!-- Job List Area End -->
     <!--Pagination Start  -->
-    <div class="pagination-area pb-115 text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="single-wrap d-flex justify-content-center">
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination justify-content-start">
-                                <li class="page-item active"><a class="page-link" href="#">01</a></li>
-                                <li class="page-item"><a class="page-link" href="#">02</a></li>
-                                <li class="page-item"><a class="page-link" href="#">03</a></li>
-                                <li class="page-item"><a class="page-link" href="#"><span
-                                            class="ti-angle-right"></span></a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!--  -->
+    {!! $jobs->links('frontend.job.paginate') !!}
     <!--Pagination End  -->
 
 </main>

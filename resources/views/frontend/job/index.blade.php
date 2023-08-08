@@ -19,9 +19,9 @@
                         <div class="row">
                             <div class="col-xl-8">
                                 <!-- form -->
-                                <form action="#" class="search-box">
+                                <form action="{{ url('/job-list')}}" class="search-box" method="GET">
                                     <div class="input-form">
-                                        <input type="text" placeholder="Job Tittle or keyword">
+                                        <input type="text" placeholder="Job Tittle or keyword" name="search">
                                     </div>
                                     <div class="select-form">
                                         <div class="select-itms">
@@ -63,7 +63,7 @@
                                 <span class="flaticon-tour"></span>
                             </div>
                             <div class="services-cap">
-                               <h5><a href="{{ route('frontend.joblist')}}">Design & Creative</a></h5>
+                               <h5><a href="{{ route('frontend.job.list')}}">Design & Creative</a></h5>
                                 <span>(653)</span>
                             </div>
                         </div>
@@ -74,7 +74,7 @@
                                 <span class="flaticon-cms"></span>
                             </div>
                             <div class="services-cap">
-                               <h5><a href="{{ route('frontend.joblist')}}">Design & Development</a></h5>
+                               <h5><a href="{{ route('frontend.job.list')}}">Design & Development</a></h5>
                                 <span>(658)</span>
                             </div>
                         </div>
@@ -85,7 +85,7 @@
                                 <span class="flaticon-report"></span>
                             </div>
                             <div class="services-cap">
-                               <h5><a href="{{ route('frontend.joblist')}}">Sales & Marketing</a></h5>
+                               <h5><a href="{{ route('frontend.job.list')}}">Sales & Marketing</a></h5>
                                 <span>(658)</span>
                             </div>
                         </div>
@@ -96,7 +96,7 @@
                                 <span class="flaticon-app"></span>
                             </div>
                             <div class="services-cap">
-                               <h5><a href="{{ route('frontend.joblist')}}">Mobile Application</a></h5>
+                               <h5><a href="{{ route('frontend.job.list')}}">Mobile Application</a></h5>
                                 <span>(658)</span>
                             </div>
                         </div>
@@ -107,7 +107,7 @@
                                 <span class="flaticon-helmet"></span>
                             </div>
                             <div class="services-cap">
-                               <h5><a href="{{ route('frontend.joblist')}}">Construction</a></h5>
+                               <h5><a href="{{ route('frontend.job.list')}}">Construction</a></h5>
                                 <span>(658)</span>
                             </div>
                         </div>
@@ -118,7 +118,7 @@
                                 <span class="flaticon-high-tech"></span>
                             </div>
                             <div class="services-cap">
-                               <h5><a href="{{ route('frontend.joblist')}}">Information Technology</a></h5>
+                               <h5><a href="{{ route('frontend.job.list')}}">Information Technology</a></h5>
                                 <span>(658)</span>
                             </div>
                         </div>
@@ -129,7 +129,7 @@
                                 <span class="flaticon-real-estate"></span>
                             </div>
                             <div class="services-cap">
-                               <h5><a href="{{ route('frontend.joblist')}}">Real Estate</a></h5>
+                               <h5><a href="{{ route('frontend.job.list')}}">Real Estate</a></h5>
                                 <span>(658)</span>
                             </div>
                         </div>
@@ -140,7 +140,7 @@
                                 <span class="flaticon-content"></span>
                             </div>
                             <div class="services-cap">
-                               <h5><a href="{{ route('frontend.joblist')}}">Content Writer</a></h5>
+                               <h5><a href="{{ route('frontend.job.list')}}">Content Writer</a></h5>
                                 <span>(658)</span>
                             </div>
                         </div>
@@ -151,7 +151,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="browse-btn2 text-center mt-50">
-                            <a href="{{ route('frontend.joblist')}}" class="border-btn2">Browse All Sectors</a>
+                            <a href="{{ route('frontend.job.list')}}" class="border-btn2">Browse All Sectors</a>
                         </div>
                     </div>
                 </div>

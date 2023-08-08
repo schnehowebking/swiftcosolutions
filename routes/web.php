@@ -105,6 +105,7 @@ Route::post('/learning/store', [ElearningFrontendController::class, 'store'])->n
 Route::get('/learning/show/{id}', [ElearningFrontendController::class, 'show'])->name('frontend.training.show');
 
 Route::get('/jobs', [JobFrontendController::class, 'index'])->name('frontend.joblist');
+Route::get('/job-list', [JobFrontendController::class, 'jobList'])->name('frontend.job.list');
 Route::post('/jobs/store', [JobFrontendController::class, 'store'])->name('frontend.jobs.store');
 Route::get('/jobs/show/{id}', [JobFrontendController::class, 'show'])->name('frontend.job.show');
 Route::get('/about', function () { return view('frontend.company.about');});
