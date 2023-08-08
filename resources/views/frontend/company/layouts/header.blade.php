@@ -63,34 +63,34 @@
                 <!-- Links -->
                 <ul class="navbar-nav ">
                     <li class="nav-item ">
-                        <a href="#" class="nav-link js-scroll-trigger">
+                        <a href="{{ url('/')}}" class="nav-link js-scroll-trigger">
                             Home
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a href="#" class="nav-link js-scroll-trigger">
+                        <a href="{{ url('about')}}" class="nav-link js-scroll-trigger">
                             About
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a href="#" class="nav-link js-scroll-trigger">
+                        <a href="{{ url('services')}}" class="nav-link js-scroll-trigger">
                             Services
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a href="#" class="nav-link js-scroll-trigger">
+                        <a href="{{ url('pricing')}}" class="nav-link js-scroll-trigger">
                             Pricing
                         </a>
                     </li>
 
                     <li class="nav-item ">
-                        <a href="#" class="nav-link js-scroll-trigger">
+                        <a href="{{ url('projects')}}" class="nav-link js-scroll-trigger">
                             Projects
                         </a>
                     </li>
 
                     <li class="nav-item ">
-                        <a href="#" class="nav-link">
+                        <a href="{{ url('contact')}}" class="nav-link">
                             Contact
                         </a>
                     </li>

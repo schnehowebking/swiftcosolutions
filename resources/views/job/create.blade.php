@@ -30,7 +30,9 @@
 @section('content')
 
 
-{{ Form::open(['url' => 'job', 'method' => 'post']) }}
+
+<form action="{{ route('job.store') }}" method="post">
+@csrf
 <div class="row mt-3">
     <div class="col-md-6 ">
         <div class="card card-fluid job-card">
@@ -72,6 +74,8 @@
                         {!! Form::date('end_date', old('end_date'), ['class' => 'form-control ', 'autocomplete' => 'off'
                         ,'placeholder'=>'Select end date']) !!}
                     </div>
+
+                    
                     <div class="form-group col-md-12">
                         <label class="col-form-label" for="skill">{{ __('Skill Box') }}</label>
                         <input type="text" class="form-control" value="" data-toggle="tags" name="skill"
@@ -157,6 +161,44 @@
             </div>
         </div>
     </div>
+    <div class="col-md-6 ">
+        <div class="card card-fluid job-card">
+            <div class="card-body ">
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label  class="col-form-label" for="vacancy">Vacancy:</label>
+                        <input type="number" class="form-control"  name="vacancy" id="vacancy">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label  class="col-form-label" for="salary">Salary Range:</label>
+                        <input type="text" class="form-control" name="salary" id="salary">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label  class="col-form-label" for="type">Job type:</label>
+                        <select class="form-control">
+                            <option value="10">Part time</option>
+                            <option value="20">Full time</option>
+                            <option value="30">Contactual</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label  class="col-form-label" for="company">Location:</label>
+                        <input type="text" class="form-control" name="location" id="company">
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label  class="col-form-label" for="company">Company:</label>
+                        <select class="form-control" name="company_id">
+                            @if($companies)
+                            @foreach ($companies as $company)
+                            <option value="{{$company->id}}">{{ $company->name}}</option>
+                            @endforeach
+                            @endif
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="col-md-6">
         <div class="card card-fluid job-card">
             <div class="card-body ">
@@ -187,6 +229,6 @@
             <input type="submit" value="{{ __('Create') }}" class="btn btn-primary">
         </div>
     </div>
-    {{ Form::close() }}
 </div>
+</form>
 @endsection

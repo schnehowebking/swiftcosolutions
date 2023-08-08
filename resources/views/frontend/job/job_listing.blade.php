@@ -220,13 +220,13 @@
                                         </a>
                                         <ul>
                                             <li>{{$job->branch}}</li>
-                                            <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                            <li>$3500 - $4000</li>
+                                            <li><i class="fas fa-map-marker-alt"></i>{{$job->location}}</li>
+                                            <li>{{$job->salary}}</li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="items-link items-link2 f-right">
-                                    <a href="{{ route('frontend.job.show', $job->id)}}">Full Time</a>
+                                    <a href="{{ route('frontend.job.show', $job->id)}}">{{ $job->job_type == 10 ? 'Part Time' ? $job->job_type == 20 ? "Full time" : "Contactual" }}</a>
                                     <span>{{$job->created_at}} </span>
                                 </div>
                             </div>

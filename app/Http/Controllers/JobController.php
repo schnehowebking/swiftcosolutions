@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Branch;
+use App\Models\Company;
 use App\Models\CustomQuestion;
 use App\Models\Job;
 use App\Models\JobApplication;
@@ -20,6 +21,7 @@ class JobController extends Controller
         if(\Auth::user()->can('Manage Job Category'))
         {
             $jobs = Job::where('created_by', '=', \Auth::user()->creatorId())->get();
+            $data['companies'] = Company::get();
 
             $data['total']     = Job::where('created_by', '=', \Auth::user()->creatorId())->count();
             $data['active']    = Job::where('status', 'active')->where('created_by', '=', \Auth::user()->creatorId())->count();
@@ -51,6 +53,7 @@ class JobController extends Controller
     public function store(Request $request)
     {
 
+        dd($request->all());
         if(\Auth::user()->can('Create Job'))
         {
 
@@ -91,6 +94,12 @@ class JobController extends Controller
             $job->visibility      = !empty($request->visibility) ? implode(',', $request->visibility) : '';
             $job->custom_question = !empty($request->custom_question) ? implode(',', $request->custom_question) : '';
             $job->created_by      = \Auth::user()->creatorId();
+
+            $job->location     = $request->location;
+            $job->salary     = $request->salary;
+            $job->job_type     = $request->job_type;
+            $job->company_id     = $request->company_id;
+            $job->vacancy     = $request->vacancy;
             $job->save();
 
             return redirect()->route('job.index')->with('success', __('Job  successfully created.'));

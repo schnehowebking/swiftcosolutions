@@ -97,13 +97,12 @@
                         <div class="small-section-tittle">
                             <h4>Company Information</h4>
                         </div>
-                        <span>Colorlib</span>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a
-                            page when looking at its layout.</p>
+                        <span>{{$job ?? $job->company->name}}</span>
+                        <p>{{$job ?? $job->company->about}}</p>
                         <ul>
-                            <li>Name: <span>Colorlib </span></li>
-                            <li>Web : <span> colorlib.com</span></li>
-                            <li>Email: <span>carrier.colorlib@gmail.com</span></li>
+                            <li>Name: <span>{{$job ?? $job->company->name}} </span></li>
+                            <li>Web : <span>{{$job ?? $job->company->website}}</span></li>
+                            <li>Email: <span>{{$job ?? $job->company->email}}</span></li>
                         </ul>
                     </div>
                 </div>

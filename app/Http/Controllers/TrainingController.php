@@ -82,6 +82,11 @@ class TrainingController extends Controller
             $training->start_date     = $request->start_date;
             $training->end_date       = $request->end_date;
             $training->description    = $request->description;
+
+            $training->course_title    = $request->course_title;
+            $training->course_video_path    = $request->course_video_path;
+            $training->number_of_course    = $request->number_of_course;
+
             $training->created_by     = \Auth::user()->creatorId();
             $training->save();
 

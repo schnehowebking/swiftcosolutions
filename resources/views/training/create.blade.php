@@ -1,6 +1,25 @@
-{{ Form::open(['url' => 'training', 'method' => 'post']) }}
+<form action="{{ route('training.store') }}" method="post">
+    @csrf
 <div class="modal-body">
     <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label  class="col-form-label" for="company">Course Title:</label>
+                <input type="text" class="form-control" name="course_title" id="company" placeholder="Give course Title">
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <label  class="col-form-label" for="company">Course Video path:</label>
+                        <input type="text" class="form-control" name="course_video_path" id="company" placeholder="Give Course video">
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <label  class="col-form-label" for="company">Number of course:</label>
+                        <input type="number" class="form-control" name="number_of_course" id="company" placeholder="Number of course">
+            </div>
+        </div>
         <div class="col-md-12">
             <div class="form-group">
                 {{ Form::label('branch', __('Branch'), ['class' => 'col-form-label']) }}
@@ -59,4 +78,4 @@
     <input type="button" value="Cancel" class="btn btn-light" data-bs-dismiss="modal">
     <input type="submit" value="{{ __('Create') }}" class="btn btn-primary">
 </div>
-{{ Form::close() }}
+</form>

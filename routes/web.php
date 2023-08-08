@@ -104,13 +104,14 @@ Route::get('/learning/create', [ElearningFrontendController::class, 'create'])->
 Route::post('/learning/store', [ElearningFrontendController::class, 'store'])->name('frontend.training.store');
 Route::get('/learning/show/{id}', [ElearningFrontendController::class, 'show'])->name('frontend.training.show');
 
-Route::get('/jobs', [JobFrontendController::class, 'index']);
-Route::get('/jobs/create', [JobFrontendController::class, 'create'])->name('frontend.job.create');
+Route::get('/jobs', [JobFrontendController::class, 'index'])->name('frontend.joblist');
 Route::post('/jobs/store', [JobFrontendController::class, 'store'])->name('frontend.jobs.store');
 Route::get('/jobs/show/{id}', [JobFrontendController::class, 'show'])->name('frontend.job.show');
-// Route::get('/dashboard', function () {
-//     return view('dashboard.dashboard');
-// })->middleware(['auth'])->name('dashboard');
+Route::get('/about', function () { return view('frontend.company.about');});
+Route::get('/services', function () { return view('frontend.company.service');});
+Route::get('/pricing', function () { return view('frontend.company.pricing');});
+Route::get('/projects', function () { return view('frontend.company.project');});
+Route::get('/contact', function () { return view('frontend.company.contact');});
 
 
 require __DIR__ . '/auth.php';

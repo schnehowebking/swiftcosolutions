@@ -16,7 +16,7 @@
                     <img class="img-fluid position-absolute w-100 h-100" src="img/cat-4.jpg" alt=""
                         style="object-fit: cover;">
                     <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
-                        <h5 class="m-0">{{$training->title}}</h5>
+                        <h5 class="m-0">{{$training->course_title}}</h5>
                         <small class="text-primary">{{$training->number_of_course}} Courses</small>
                     </div>
                 </a>

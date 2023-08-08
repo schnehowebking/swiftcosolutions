@@ -15,26 +15,6 @@ class JobFrontendController extends Controller
         return view('frontend.job.index', \compact('jobs'));
     }
 
-    public function getJobList()
-    {
-        $jobs = Job::get();
-        return view('frontend.job.job_listing', \compact('jobs'));
-    }
-
-    public function create()
-    {
-        return view('frontend.job.edit');
-    }
-
-    public function store(Request $request)
-    {
-        $this->validate($request, [
-            'title' => 'required'
-        ]);
-        $res = Job::save_job($request);
-        return back();
-    }
-
     public function show(Request $request, $id)
     {
         $job = Job::findOrFail($id);

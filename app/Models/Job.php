@@ -39,6 +39,11 @@ class Job extends Model
         return $this->hasOne('App\Models\JobCategory', 'id', 'category');
     }
 
+    public function comapny()
+    {
+        return $this->belongsTo('App\Models\Company');
+    }
+
     public function questions()
     {
         $ids = explode(',', $this->custom_question);
