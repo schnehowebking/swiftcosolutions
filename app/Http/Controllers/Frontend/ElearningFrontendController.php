@@ -11,8 +11,8 @@ class ElearningFrontendController extends Controller
     //
     public function index()
     {
-        $trainigs = Training::get();
-        return view('frontend.elearning.index', compact('trainigs'));
+        $trainings = Training::get();
+        return view('frontend.elearning.index', compact('trainings'));
     }
 
     public function create()
