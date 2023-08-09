@@ -39,7 +39,7 @@ class Job extends Model
         return $this->hasOne('App\Models\JobCategory', 'id', 'category');
     }
 
-    public function comapny()
+    public function company()
     {
         return $this->belongsTo('App\Models\Company');
     }

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('salary')->nullable();
             $table->integer('company_id')->nullable();
             $table->integer('vacancy')->nullable();
-            $table->integer('job-type')->nullable();
+            $table->integer('job_type')->nullable();
         });
     }
 

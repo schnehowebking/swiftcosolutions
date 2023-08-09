@@ -46,14 +46,14 @@ class JobController extends Controller
         $status = Job::$status;
 
         $customQuestion = CustomQuestion::where('created_by', \Auth::user()->creatorId())->get();
+        $companies = Company::get();
 
-        return view('job.create', compact('categories', 'status', 'branches', 'customQuestion'));
+        return view('job.create', compact('categories', 'status', 'branches', 'customQuestion', 'companies'));
     }
 
     public function store(Request $request)
     {
 
-        dd($request->all());
         if(\Auth::user()->can('Create Job'))
         {
 

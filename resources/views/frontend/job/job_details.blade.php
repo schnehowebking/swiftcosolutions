@@ -97,12 +97,12 @@
                         <div class="small-section-tittle">
                             <h4>Company Information</h4>
                         </div>
-                        <span>{{$job ?? $job->company->name}}</span>
-                        <p>{{$job ?? $job->company->about}}</p>
+                        <span>{{$job->company? $job->company->name : ''}}</span>
+                        <p>{{$job->company ? $job->company->about : ''}}</p>
                         <ul>
-                            <li>Name: <span>{{$job ?? $job->company->name}} </span></li>
-                            <li>Web : <span>{{$job ?? $job->company->website}}</span></li>
-                            <li>Email: <span>{{$job ?? $job->company->email}}</span></li>
+                            <li>Name: <span>{{$job->company? $job->company->name : ''}} </span></li>
+                            <li>Web : <span>{{$job->company ? $job->company->website : ""}}</span></li>
+                            <li>Email: <span>{{$job->company ? $job->company->email : ''}}</span></li>
                         </ul>
                     </div>
                 </div>

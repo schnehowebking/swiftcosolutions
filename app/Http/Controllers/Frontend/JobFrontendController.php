@@ -28,7 +28,7 @@ class JobFrontendController extends Controller
 
     public function show(Request $request, $id)
     {
-        $job = Job::findOrFail($id);
+        $job = Job::with('company')->where('id', $id)->first();
         return view('frontend.job.job_details', compact('job'));
     }
 }
